@@ -1,4 +1,4 @@
- add the linters you want stickler to use for this project
+# add the linters you want stickler to use for this project
 linters:
   rubocop:
     display_cop_names: true
