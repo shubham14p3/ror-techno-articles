@@ -2,7 +2,6 @@
 <%  @articles.each do |article| %>
 <h1><%= article.title %></h1>
 <p><%= article.text %>  </p>
-<strong><%= article.category.name %>  </strong>
 
 <span>Number of votes  <%= article.votes.size %></span>
 <%= vote_or_unvote(article) %>
