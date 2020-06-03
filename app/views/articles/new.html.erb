@@ -9,6 +9,7 @@
   <%= form.label :title, "Title", class: "label-form mt-4" %>
   <%= form.text_field :title, class: 'form-control', placeholder: 'Add Title' %>
 
+
   <%= form.label :image, "Image ", class: "label-form mt-4" %>
   <%= form.text_field :image, class: 'form-control mb-4', placeholder: 'eg: https://gogle.com/abc.jpg(PNG_or_JPG_extenstion only) ' %>
 
@@ -17,6 +18,7 @@
   <%= link_to('Create new Category', new_category_path, class: 'label-form') %>
 <br>
   <%= form.label "Content", class: "label-form mt-4" %>
+
   <%= form.text_area :text, class: 'form-control', placeholder: 'Add Content...', size: "60x12" %>
 
   <% if @article.errors.full_messages.any? %>
@@ -25,7 +27,9 @@
   </div>
   <% end %>
 
+
   <%= form.submit 'Create Article', class: 'btn send-button mt-4 mb-5' %>
+
   <% end %>
 
 
