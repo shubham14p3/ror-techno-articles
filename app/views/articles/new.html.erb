@@ -10,7 +10,7 @@
   <%= form.text_field :title, class: 'form-control', placeholder: 'Add Title' %>
 
   <%= form.label :image, "Image ", class: "label-form mt-4" %>
-  <%= form.text_field :image, class: 'form-control mb-4', placeholder: 'ej: https://i.imgur.com/8R0jcdO.jpg ' %>
+  <%= form.text_field :image, class: 'form-control mb-4', placeholder: 'eg: https://gogle.com/abc.jpg(PNG_or_JPG_extenstion only) ' %>
 
 <%= form.label :category, "Category ", class: "label-form mt-4" %> <br>
   <%= form.collection_select :category_id, @categories, :id, :name, {prompt: "Select Category"}, {class: 'mdb-select md-form' } %>
