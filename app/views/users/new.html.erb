@@ -1,0 +1,6 @@
+<div class="container">
+  Sign up
+  <%= form_for(@user) do |f| %> <%= render 'shared/error_messages' %>
+  <%= f.label :name %> <%= f.text_field :name, class: 'form-control' %>
+  <%= f.submit "Create my account", class: "btn btn-primary" %> <% end %>
+</div>
