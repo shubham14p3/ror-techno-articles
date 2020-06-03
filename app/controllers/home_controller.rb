@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+  before_action :require_logged_in
   def index
-    @articles = Article.all
+    @categories = Category.all
+    @most_voted_article = most_voted_article
   end
 end

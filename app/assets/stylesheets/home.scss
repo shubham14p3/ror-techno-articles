@@ -1,0 +1,54 @@
+//Top article
+
+.article-title {
+  color: #fd6000;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.article-text {
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.top-post {
+  position: relative;
+  color: white;
+  padding: 180px;
+  background-repeat: no-repeat !important;
+  background-size:cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  -moz-box-shadow:    inset  1px -200px 10px -10px rgba(0,0,0,.4);
+  -webkit-box-shadow: inset  1px -200px 10px -10px rgba(0,0,0,.4);
+  box-shadow:         inset  1px -200px 10px -10px rgba(0,0,0,.4);
+}
+
+//Category display on home
+
+a.category-name, a.category-name:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.category-name {
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  border-bottom: 2px solid yellow;
+  text-transform: capitalize;
+}
+
+.vote-white, i.vote-white, a.vote-white {
+  color: white !important;
+}
+
+//
+.bottom-left {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-weight: bold;
+}

@@ -3,9 +3,11 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @categories = Category.all
   end
 
   def create
+    @categories = Category.all
     @user = current_user
     @article = @user.articles.new(post_params)
 
@@ -13,13 +15,13 @@ class ArticlesController < ApplicationController
       redirect_to root_path
       flash[:success] = 'Article created Succesfully'
     else
-      render :new
+      render 'new'
     end
   end
 
   private
 
   def post_params
-    params.require(:article).permit(:text, :title)
+    params.require(:article).permit(:text, :title, :category_id, :image)
   end
 end
