@@ -22,8 +22,6 @@ class ArticlesController < ApplicationController
   private
 
   def post_params
-
     params.require(:article).permit(:text, :title, :category_id, :image)
-
   end
 end
