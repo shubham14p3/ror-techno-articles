@@ -7,7 +7,6 @@ AllCops:
     - "Rakefile"
     - "README.md"
     - "node_modules/**/*"
-    - ".stickler.yml"
 
   DisplayCopNames: true
 
