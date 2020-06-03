@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   helper_method :log_in, :current_user, :log_out, :logged_in?, :require_logged_in
-
   def log_out
     session.delete(:user_id)
     @current_user = nil
