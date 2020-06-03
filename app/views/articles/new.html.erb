@@ -2,13 +2,20 @@
   <%= form_for(@article) do |form| %>
   <%= form.label :title %>
   <%= form.text_field :title, class: 'form-control', placeholder: 'Add Title' %>
+  <%= form.label 'select yor category' %>
+
+  <%= form.collection_select :category_id, @categories, :id, :name,  prompt: "Select Category" %>
   <%= form.label :Content %>
   <%= form.text_area :text, class: 'form-control', placeholder: 'Add Content...', size: "60x12" %>
+
   <% if @article.errors.full_messages.any? %>
   <div class="alert alert-danger" role="alert">
     <%= "Post could not be saved. #{@article.errors.full_messages.join('. ')}" %>
   </div>
   <% end %>
+
   <%= form.submit 'Create Article', class: 'btn btn-primary' %>
   <% end %>
+
+
 </div>
