@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     if user
       log_in user
       redirect_to root_path
-      flash[:info] = 'Logged in correctly'
+      flash[:info] = 'Logged in successfully!'
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'This user does not exist'
       render 'new'
     end
   end

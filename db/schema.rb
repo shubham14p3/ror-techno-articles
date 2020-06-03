@@ -11,9 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
-ActiveRecord::Schema.define(version: 2020_02_21_183920) do
+ActiveRecord::Schema.define(version: 2020_03_02_193724) do
 
-ActiveRecord::Schema.define(version: 2020_02_21_165045) do
 
 
   create_table "articles", force: :cascade do |t|
@@ -23,6 +22,9 @@ ActiveRecord::Schema.define(version: 2020_02_21_165045) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
+
+    t.string "image"
+
     t.index ["category_id"], name: "index_articles_on_category_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
@@ -45,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_02_21_165045) do
     t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_votes_on_article_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
 end

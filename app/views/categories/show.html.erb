@@ -1,0 +1,39 @@
+<div class=" col-12 bg-brown p-5">
+  <h1 class="page-title-wihte"> Articles of: <%= @category.name %></h1>
+</div>
+
+
+<div class="container-fluid mt-5 mb-5">
+  <div class="row">
+    <% counter = 0 %>
+    <% out = '' %>
+    <% @articles.each do |article| %>
+    <% counter == 2 and out == '' ? ( counter , out = 0, 'flex-row-reverse') : (counter, out = 0,  '') %>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="row <%= out %>">
+
+        <div class="col-lg-6  col-md-12 category-post"  style="background:url(<%= article.image %>)">
+        </div>
+
+        <div class=" col-lg-6 col-md-12 align-self-center p-4 m-0">
+          <h5 class="categories-title-category ""> <%= article.category.name %> </h5> <br>
+          <h5 class="categories-title-article mt-4"> <%= article.title %> </h5>
+          <p> <%= truncate(article.text, length: 125) %> </p>
+          <p class="categories-rm-article ">Read More</p>
+          <div class="row">
+            <div class="col-8">
+              <span class="categories-rm-article text-capitalize font-weight-bold" >Author: <%= article.user.name %> </span>
+            </div>
+            <div class="col-4 text-rigth">
+              <span class="label-form">  <%= article.votes.size %> <%= vote_or_unvote(article) %></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <% counter += 1%>
+    <% end %>
+  </div>
+</div>

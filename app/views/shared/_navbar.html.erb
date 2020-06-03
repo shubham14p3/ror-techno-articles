@@ -1,28 +1,39 @@
 
-<nav class="sticky-top">
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center sticky-top">
+  <%= link_to image_tag("logo-black.png", size: "150x50"), root_path, :class => 'navbar-brand d-flex w-50 mr-auto'%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+    <ul class="navbar-nav w-100 justify-content-center">
+      <li class="nav-item">
+        <%= link_to "HOME", root_path, :class => 'nav-link link-nav '%>
+        <% if logged_in? %>
 
-  <div class="d-flex justify-content-between p-4">
+      </li>
+      <li class="nav-item">
+        <%= link_to "WRITE ARTICLE", new_article_path, :class => 'nav-link link-nav '%>
+        <% end %>
+      </li>
 
-    <div>
-      <%= link_to image_tag("logo-black.png", size: "150x50"), root_path, :class => 'pl-3 link-nav'%>
-    </div>
+    </ul>
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <li class="nav-item">
+        <% if logged_in? %>
+        <%= link_to "LOGOUT", logout_path, :class => 'nav-link link-nav ', method: :delete %>
+        <% else %>
+        <%= link_to "LOGIN", login_path, :class => 'nav-link link-nav '%>
+      </li>
+      <li class="nav-item">
 
-    <div class="mt-3">
-      <%= link_to "HOME", root_path, :class => 'pl-3 link-nav'%>
-      <% if logged_in? %>
-      <%= link_to "WRITE ARTICLE", new_article_path, :class => 'pl-3 link-nav'%>
-      <% end %>
-    </div>
+        <span class='nav-link link-nav '> | </span>
 
-    <div class="mt-3">
-      <% if logged_in? %>
-      <%= link_to "LOGOUT", logout_path, :class => 'pr-2 link-nav', method: :delete %>
-      <% else %>
-      <%= link_to "LOGIN", login_path, :class => 'pr-2 link-nav'%> |
-      <%= link_to "REGISTER", new_user_path, :class => 'pr-3 pl-2 link-nav'%>
-      <% end %>
-    </div>
+      </li>
+      <li class="nav-item">
 
+        <%= link_to "REGISTER", signup_path, :class => 'nav-link link-nav '%>
+        <% end %>
+      </li>
+    </ul>
   </div>
 </nav>
-<hr>
