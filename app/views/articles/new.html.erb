@@ -1,0 +1,36 @@
+<div class=" col-12 bg-brown p-5">
+  <h1 class="page-title-wihte ">Write an article</h1>
+</div>
+
+<div class="container">
+
+
+  <%= form_for(@article) do |form| %>
+  <%= form.label :title, "Title", class: "label-form mt-4" %>
+  <%= form.text_field :title, class: 'form-control', placeholder: 'Add Title' %>
+
+
+  <%= form.label :image, "Image ", class: "label-form mt-4" %>
+  <%= form.text_field :image, class: 'form-control mb-4', placeholder: 'eg: https://gogle.com/abc.jpg(PNG_or_JPG_extenstion only) ' %>
+
+<%= form.label :category, "Category ", class: "label-form mt-4" %> <br>
+  <%= form.collection_select :category_id, @categories, :id, :name, {prompt: "Select Category"}, {class: 'mdb-select md-form' } %>
+  <%= link_to('Create new Category', new_category_path, class: 'label-form') %>
+<br>
+  <%= form.label "Content", class: "label-form mt-4" %>
+
+  <%= form.text_area :text, class: 'form-control', placeholder: 'Add Content...', size: "60x12" %>
+
+  <% if @article.errors.full_messages.any? %>
+  <div class="alert alert-danger" role="alert">
+    <%= "Post could not be saved. #{@article.errors.full_messages.join('. ')}" %>
+  </div>
+  <% end %>
+
+
+  <%= form.submit 'Create Article', class: 'btn send-button mt-4 mb-5' %>
+
+  <% end %>
+
+
+</div>

@@ -1,0 +1,20 @@
+<div class="container-fluid h-75 p-5 bg-brown">
+
+  <div class="row h-100">
+    <div class="col-md-6 my-auto">
+      <div class="card m-0 p-3">
+        <h1 class="page-title">Login</h1>
+        <%= form_for(:session, url: login_path) do |f| %>
+
+        <%= f.label :name, "Name: ", class: "label-form" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.submit "Login", class: "btn send-button mt-5 mb-5" %>
+        <% end %>
+        <p class="label-form"> Not Registed? <%= link_to "Sign up now!", signup_path, class: 'label-form' %></p>
+
+      </div>
+    </div>
+  </div>
+
+</div>

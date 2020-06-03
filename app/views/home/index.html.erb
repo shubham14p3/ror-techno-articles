@@ -1,0 +1,35 @@
+
+<% if @most_voted_article %>
+
+<div class="top-post h-50" style="background:url(<%= @most_voted_article.image %>)">
+  <div class="bottom-left">
+    <h4 class="article-title"> <%= @most_voted_article.title %> </h4>
+
+    <p class="article-text"> <%= truncate(@most_voted_article.text, length:100, separator: ' ') %> </p>
+    <span class="vote-white">  <%= @most_voted_article.votes.size %> <%= vote_or_unvote(@most_voted_article, 'vote-white') %></span>
+
+  </div>
+</div>
+
+<% end %>
+
+
+<div class="container-fluid">
+
+
+  <div class="row">
+
+    <%  @categories.ordered_by_priority.each do |category| %>
+    <% if category.articles.size > 0 %>
+    <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+      <div class="category-post"  style="background:url(<%= category.articles.ordered_most_recent.first.image %>)">
+        <h5> <%= link_to(category.name, category_path(category), :class => 'category-name m-4')%> </h5>
+        <p class="article-title-category bottom-left m-4"><%= category.articles.ordered_most_recent.first.title %></p>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+
+  </div>
+
+</div>
