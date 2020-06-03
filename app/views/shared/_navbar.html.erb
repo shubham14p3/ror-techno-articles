@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center sticky-top">
+  <%= link_to image_tag("logo-black.png", size: "150x50"), root_path, :class => 'navbar-brand d-flex w-50 mr-auto'%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+    <ul class="navbar-nav w-100 justify-content-center">
+      <li class="nav-item">
+        <%= link_to "HOME", root_path, :class => 'nav-link link-nav '%>
+        <% if logged_in? %>
+
+      </li>
+      <li class="nav-item">
+        <%= link_to "WRITE ARTICLE", new_article_path, :class => 'nav-link link-nav '%>
+        <% end %>
+      </li>
+
+    </ul>
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <li class="nav-item">
+        <% if logged_in? %>
+        <%= link_to "LOGOUT", logout_path, :class => 'nav-link link-nav ', method: :delete %>
+        <% else %>
+        <%= link_to "LOGIN", login_path, :class => 'nav-link link-nav '%>
+      </li>
+      <li class="nav-item">
+
+        <span class='nav-link link-nav '> | </span>
+
+      </li>
+      <li class="nav-item">
+
+        <%= link_to "REGISTER", signup_path, :class => 'nav-link link-nav '%>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

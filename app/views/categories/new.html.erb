@@ -1,0 +1,18 @@
+
+<div class=" col-12 bg-brown p-5">
+  <h1 class="page-title-wihte">New category </h1>
+</div>
+<div class="container mt-5  h-75">
+  <% if @category.errors.full_messages.any? %>
+  <div class="alert alert-danger" role="alert">
+    <%= "Post could not be saved. #{@category.errors.full_messages.join('. ')}" %>
+  </div>
+  <% end %>
+  <%= form_for(@category) do |f| %> <%= render 'shared/error_messages' %>
+  <%= f.label :name, "Name of category", class: "label-form mt-4" %>
+  <%= f.text_field :name, class: 'form-control' %>
+  <%= f.label :priority, "Priority (1 - 5)", class: "label-form mt-4" %>
+  <%= f.number_field :priority, class: 'form-control' %>
+  <%= f.submit "Create Category", class: 'btn send-button mt-4 mb-5' %>
+  <% end %>
+</div>
