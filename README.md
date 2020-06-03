@@ -33,7 +33,7 @@
 
 ## Live Link
 
-[Livelink] https://murmuring-thicket-07012.herokuapp.com/users/sign_in
+[Livelink] 
 
 ## Built With
 
