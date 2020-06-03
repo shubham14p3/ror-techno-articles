@@ -4,4 +4,5 @@ class Article < ApplicationRecord
   validates :text, presence: true, length: { maximum: 1000,
                                              too_long: '1000 characters in Article content is the maximum allowed.' }
   belongs_to :user
+  has_many :votes, dependent: :destroy
 end
