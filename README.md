@@ -125,6 +125,10 @@ Postgres: >=9.5
   ```
       $ heroku run rails db:migrate
   ```
+## Note
+
+- Try to use images in dark solid background it will improve the styling.
+- If there is any Ruby version mismatch, you can replace the version between (2.6.6 to 2.7.0)
 
 ## Authors
 
