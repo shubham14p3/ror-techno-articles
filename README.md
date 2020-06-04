@@ -41,7 +41,7 @@ The project is build for the Ruby on Rails capstone from Microverse which is bas
 
 ## Built With
 
-- Ruby v2.6.5
+- Ruby v2.6.6
 - Ruby on Rails v5.2.4
 
 ## Getting Started
