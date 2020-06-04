@@ -33,7 +33,7 @@ The project is build for the Ruby on Rails capstone from Microverse which is bas
 
 ## Live Link
 
-[Live Version](https://cryptic-river-49971.herokuapp.com/login)
+[Live Version](https://polar-tundra-57268.herokuapp.com/login)
 
 ### Live Version
 
@@ -62,12 +62,6 @@ Install the needed gems:
 
 ```
 $ bundle install
-```
-
-Next, initialize the pre-build database with seeds :
-
-```
-$ rake db:seed
 ```
 
 and then
