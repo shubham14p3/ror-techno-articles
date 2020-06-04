@@ -33,7 +33,7 @@ The project is build for the Ruby on Rails capstone from Microverse which is bas
 
 ## Live Link
 
-[Live Version](https://polar-tundra-57268.herokuapp.com/login)
+[Live Version](https://rocky-sierra-67024.herokuapp.com/)
 
 ### Live Version
 
@@ -70,7 +70,6 @@ and then
 $ rake db:setup
 
 ```
-
 
 Next, migrate the database:
 
