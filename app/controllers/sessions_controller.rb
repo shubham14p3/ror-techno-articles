@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user
       log_in user
       redirect_to root_path
-      flash[:info] = 'Logged in successfully!'
+      flash[:info] = 'Logged in correctly'
     else
       flash.now[:danger] = 'This user does not exist'
       render 'new'

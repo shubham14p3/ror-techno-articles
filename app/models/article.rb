@@ -3,7 +3,6 @@ class Article < ApplicationRecord
                                               too_long: '50 characters in Article title is the maximum allowed.',
                                               minimum: 4 }
   validates :text, presence: true, length: { maximum: 1000,
-
                                              too_long: '1000 characters in Article content is the maximum allowed.',
                                              minimum: 100 }
   validates :category_id, presence: true
@@ -11,7 +10,6 @@ class Article < ApplicationRecord
 
   belongs_to :user
   belongs_to :category
-
   has_many :votes, dependent: :destroy
 
   VALID_IMAGE = /.(?:jpg|png)/i.freeze

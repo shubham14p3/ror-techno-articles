@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @articles = @category.articles.ordered_most_recent
+    @articles = @category.include(:id).articles.ordered_most_recent
   end
 
   def create
