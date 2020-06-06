@@ -1,47 +1,27 @@
-# Technology Article App on Ruby on Rails
+# Social Media App with Ruby on Rails
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-The project is build for the Ruby on Rails capstone from Microverse which is based on Technology Articles website. It is a website with articles on latest technologies.
+> On this milestone, we achieved the creation of a 2 record per relationship architecture for the database based on [the article by Quassnoi](https://explainextended.com/2009/03/07/selecting-friends/) where he explains and shows why this model is better than a cross-checking architecture to eliminate the possibility of multiple friend requests with the same 2 users. We polished the front-end to give users all the features expected in a social network; like send friend requests, accept/deny requests, see posts in chronological order, create posts, add comments to posts, etc.
 
-### Home Page
+![screenshot1](images/screenshot02.png)
 
-![screenshot1](app/assets/images/screenshot01.PNG)
+![screenshot1](images/screenshot01.png)
 
-### Login Page
+![screenshot1](images/screenshot03.png)
 
-![screenshot1](app/assets/images/screenshot06.PNG)
+![screenshot1](images/screenshot04.png)
 
-### Signup Page
+## Live Linke
 
-![screenshot1](app/assets/images/screenshot02.PNG)
-
-### Notice after Successfull LogIn
-
-![screenshot1](app/assets/images/screenshot03.PNG)
-
-### Writing Articles
-
-![screenshot1](app/assets/images/screenshot04.PNG)
-
-### Viewing Articles by Categories
-
-![screenshot1](app/assets/images/screenshot05.PNG)
-
-## Live Link
-
-[Live Version](https://rocky-sierra-67024.herokuapp.com/)
-
-### Live Version
-
-![screenshot1](app/assets/images/screenshot07.PNG)
+[Livelink] https://murmuring-thicket-07012.herokuapp.com/users/sign_in
 
 ## Built With
 
-- Ruby v2.6.6
+- Ruby v2.6.5
 - Ruby on Rails v5.2.4
 
 ## Getting Started
@@ -55,7 +35,7 @@ $ cd <directory>
 Clone the repo typing:
 
 ```
-$ git clone https://github.com/shubham14p3/ror-techno-articles.git
+$ git clone git@github.com:shubham14p3/ror-social-scaffold.git
 ```
 
 Install the needed gems:
@@ -64,12 +44,19 @@ Install the needed gems:
 $ bundle install
 ```
 
+Next, initialize the pre-build database with seeds :
+
+```
+$ rake db:seed
+```
+
 and then
 
 ```
 $ rake db:setup
 
 ```
+
 
 Next, migrate the database:
 
@@ -85,45 +72,29 @@ $ rails server
 
 Open `http://localhost:3000/` in your browser.
 
-### Prerequisites (Minimum)
+### Prerequisites
 
-Ruby: 2.6.6
+Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
 
 ### Run tests
 
 ```
-    rpsec --format documentation { path }
+  rpsec spec/features/users/users_spec.rb
+
+  psec spec/features/users/friends_spec.rb
+
+  rpsec spec/features/users/login_spec.rb
 ```
 
-
-### Deployment
-
-#### Heroku
-
-  Create a Heroku App
-
-  ```
-      $ heroku create
-  ```
-  Push the changes to the Heroku App
-
-  ```
-      $ git push heroku master
-  ```
-
-  Make a migration to the Heroku App
-
-  ```
-      $ heroku run rails db:migrate
-  ```
-## Note
-
-- Try to use images in dark solid background it will improve the styling.
-- If there is any Ruby version mismatch, you can replace the version between (2.6.6 to 2.7.0)
-
 ## Authors
+
+👤 **Luis Angel Maldonado**
+
+- Github: [@lmaldonadoch](https://github.com/lmaldonadoch)
+- Twitter: [@LuisAngelMCh](https://twitter.com/LuisAngelMCh)
+- Linkedin: [linkedin](https://www.linkedin.com/in/lmaldonadoch)
 
 👤 **Shubham Raj**
 
@@ -134,7 +105,7 @@ Postgres: >=9.5
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/shubham14p3/ror-techno-articles/issues).
+Feel free to check the [issues page](https://github.com/shubham14p3//ror-social-scaffold/issues/).
 
 ## Show your support
 
@@ -149,10 +120,10 @@ Give a ⭐️ if you like this project!
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/shubham14p3/members-only.svg?style=flat-square
-[contributors-url]: https://github.com/shubham14p3/ror-techno-articles/graphs/contributors
+[contributors-url]: https://github.com/shubham14p3/ror-social-scaffold/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/shubham14p3/members-only.svg?style=flat-square
-[forks-url]: https://github.com/shubham14p3/ror-techno-articles/network/members
+[forks-url]: https://github.com/shubham14p3/ror-social-scaffold/network/members
 [stars-shield]: https://img.shields.io/github/stars/shubham14p3/members-only.svg?style=flat-square
-[stars-url]: https://github.com/shubham14p3/ror-techno-articles/stargazers
+[stars-url]: https://github.com/shubham14p3/ror-social-scaffold/stargazers
 [issues-shield]: https://img.shields.io/github/issues/shubham14p3/members-only.svg?style=flat-square
-[issues-url]: https://github.com/shubham14p3/ror-techno-articles/issues
+[issues-url]: https://github.com/shubham14p3/ror-social-scaffold/issues
