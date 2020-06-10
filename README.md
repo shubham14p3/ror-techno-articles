@@ -130,6 +130,14 @@ Postgres: >=9.5
 - Github: [@ShubhamRaj](https://github.com/shubham14p3)
 - Linkedin: [Shubham14p3](https://www.linkedin.com/in/shubham14p3/)
 
+## Future Updates
+
+- Will be re-degiging all the styling css to custom.
+- Bootstrap needs some more working.
+- More Logics will be added.
+- The model will be divided into sub specific components.
+- More Validation rules will be applied.
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
@@ -143,8 +151,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Project requested by [Microverse Program](https://www.microverse.org/).
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
